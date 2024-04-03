@@ -73,8 +73,8 @@ export default function Home() {
               <Image
                 src={"/coinIcon.png"}
                 alt="icon"
-                 height={100}
-                  width={80}
+                height={150}
+                width={100}
                 className="absolute"
               />
               <div className=" w-[50%] rounded-r-full h-12 bg-white ml-[67px] flex gap-2 justify-center items-center ">
