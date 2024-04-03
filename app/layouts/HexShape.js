@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HexUp from "../Images/UpHex.png";
+import HexUp from "../../public/Images/UpHex.png";
 
 export default function HexShape({ UpPayout }) {
   return (

@@ -7,9 +7,9 @@ import {
   FaArrowDown,
 } from "react-icons/fa6";
 import { RxCountdownTimer } from "react-icons/rx";
-import coinImage from "./Images/coinIcon.png";
-import clockImage from "./Images/clock.png";
-import CardArrow from "./Images/cardArrow.png";
+import coinImage from "../public/Images/coinIcon.png";
+import clockImage from "../public/Images/clock.png";
+import CardArrow from "../public/Images/cardArrow.png";
 import HexShape from "./layouts/HexShape";
 import HexDownShape from "./layouts/HexDownShape";
 import CardHeader from "./layouts/CardHeader";
@@ -71,8 +71,10 @@ export default function Home() {
           <div className="">
             <div className="flex w-full items-center   ">
               <Image
-                src={"./Images/coinIcon.png"}
+                src={coinImage}
                 alt="icon"
+                height={100}
+                width={80}
                 className="absolute"
               />
               <div className=" w-[50%] rounded-r-full h-12 bg-white ml-[67px] flex gap-2 justify-center items-center ">
@@ -90,7 +92,7 @@ export default function Home() {
               </div>
               <div>
                 <Image
-                  src={"./Images/cardArrow.png"}
+                  src={CardArrow}
                   alt="cardArrow"
                   height={100}
                   width={80}
@@ -109,12 +111,7 @@ export default function Home() {
                 <p>5m</p>
               </div>
               <div className="absolute pl-[100px]">
-                <Image
-                  src={"./Images/clock.png"}
-                  height={100}
-                  width={100}
-                  alt="clock"
-                />
+                <Image src={clockImage} height={100} width={100} alt="clock" />
               </div>
             </div>
             <div className="flex gap-2">
@@ -141,6 +138,7 @@ export default function Home() {
             {data &&
               data.map((item) => (
                 <div
+                  key={item.pricePool}
                   className={
                     item.status === "Expired"
                       ? "opacity-60 w-[25%] flex flex-col justify-center  items-center bg-[#ffffff] rounded-xl"
