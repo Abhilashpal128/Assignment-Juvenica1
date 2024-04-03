@@ -71,10 +71,10 @@ export default function Home() {
           <div className="">
             <div className="flex w-full items-center   ">
               <Image
-                src={coinImage}
+                src={"/Images/coinIcon.png"}
                 alt="icon"
-                height={100}
-                width={80}
+                 height={100}
+                  width={80}
                 className="absolute"
               />
               <div className=" w-[50%] rounded-r-full h-12 bg-white ml-[67px] flex gap-2 justify-center items-center ">
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
               <div>
                 <Image
-                  src={CardArrow}
+                  src={"/Images/cardArrow.png"}
                   alt="cardArrow"
                   height={100}
                   width={80}
@@ -111,7 +111,12 @@ export default function Home() {
                 <p>5m</p>
               </div>
               <div className="absolute pl-[100px]">
-                <Image src={clockImage} height={100} width={100} alt="clock" />
+                <Image
+                  src={"/Images/clock.png"}
+                  height={100}
+                  width={100}
+                  alt="clock"
+                />
               </div>
             </div>
             <div className="flex gap-2">

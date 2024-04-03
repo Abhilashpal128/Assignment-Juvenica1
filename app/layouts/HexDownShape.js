@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HexDown from "../../public/Images/DownHex.png";
+import HexDown from "/Images/DownHex.png";
 
 export default function HexDownShape({ DownPayout }) {
   return (
