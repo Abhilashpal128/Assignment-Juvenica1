@@ -1,113 +1,223 @@
 import Image from "next/image";
+import { PiTrophyBold } from "react-icons/pi";
+import {
+  FaRegCircleQuestion,
+  FaArrowLeftLong,
+  FaArrowRightLong,
+  FaArrowDown,
+} from "react-icons/fa6";
+import { RxCountdownTimer } from "react-icons/rx";
+import coinImage from "./Images/coinIcon.png";
+import clockImage from "./Images/clock.png";
+import CardArrow from "./Images/cardArrow.png";
+import HexShape from "./layouts/HexShape";
+import HexDownShape from "./layouts/HexDownShape";
+import CardHeader from "./layouts/CardHeader";
+import HexDownWhite from "./layouts/HexDownWhite";
 
 export default function Home() {
+  const data = [
+    {
+      status: "Expired",
+      Lastprise: "228.5334",
+      DownValue: "0.4141",
+      LockedPrise: "228.9473",
+      pricePool: "8.5143",
+      upPayout: "2.15x",
+      downPayout: "1.87x",
+    },
+    {
+      status: "Expired",
+      Lastprise: "228.9473",
+      DownValue: "0.5791",
+      LockedPrise: "229.5264",
+      pricePool: "5.2427",
+      upPayout: "1.76x",
+      downPayout: "2.32x",
+    },
+    {
+      status: "Live",
+      Lastprise: "228.5332",
+      DownValue: "0.4141",
+      LockedPrise: "228.9473",
+      pricePool: "8.5143",
+      upPayout: "2.15x",
+      downPayout: "1.87x",
+    },
+    {
+      status: "Next",
+      Lastprise: "228.5332",
+      DownValue: "0.4141",
+      LockedPrise: "2289473",
+      pricePool: "8.5143",
+      upPayout: "1.35x",
+      downPayout: "3.84x",
+    },
+    {
+      status: "Later",
+      Lastprise: "228.5332",
+      DownValue: "0.4141",
+      LockedPrise: "2289473",
+      pricePool: "8.5143",
+      upPayout: "2.15x",
+      downPayout: "1.87x",
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="bg-gradient-to-tl flex flex-col py-9 from-[#a3a9d6] to-[#c5cfeb] w-full h-screen">
+        <div className="grid grid-cols-3 justify-center items-center mx-8 py-8">
+          <div className="">
+            <div className="flex w-full items-center   ">
+              <Image src={coinImage} alt="icon" className="absolute" />
+              <div className=" w-[50%] rounded-r-full h-12 bg-white ml-[67px] flex gap-2 justify-center items-center ">
+                <h1 className="text-[#280e5f] text-xl font-extrabold">
+                  BNBUSD
+                </h1>
+                <p className="text-sm font-semibold text-[#301665]">$2285332</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className=" w-[30%] rounded-full h-12 bg-white flex gap-2 justify-evenly items-center mx-auto ">
+              <div className="text-xl text-[#30cbd6]">
+                <FaArrowLeftLong />
+              </div>
+              <div>
+                <Image
+                  src={CardArrow}
+                  alt="cardArrow"
+                  height={100}
+                  width={80}
+                />
+              </div>
+              <div className="text-xl text-[#30cbd6]">
+                <FaArrowRightLong />
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-12">
+            {" "}
+            <div className=" w-[30%] rounded-full h-12 bg-white flex gap-2  items-center ">
+              <div className="flex gap-2 items-center ml-2">
+                <h1 className="text-xl text-[#7645d9] font-bold">00:38</h1>
+                <p>5m</p>
+              </div>
+              <div className="absolute pl-[100px]">
+                <Image src={clockImage} height={100} width={100} alt="clock" />
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <div className="text-white text-xl font-semibold rounded-xl bg-[#7a6eaa]">
+                <div className="p-4">
+                  <FaRegCircleQuestion />
+                </div>
+              </div>
+              <div className="text-white text-xl font-semibold rounded-xl bg-[#7a6eaa]">
+                <div className="p-4">
+                  <PiTrophyBold />
+                </div>
+              </div>
+              <div className="text-white text-xl font-semibold rounded-xl bg-[#e9eaeb]">
+                <div className="p-4">
+                  <RxCountdownTimer />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex overflow-x-auto justify-center gap-4   items-center">
+            {data &&
+              data.map((item) => (
+                <div
+                  className={
+                    item.status === "Expired"
+                      ? "opacity-60 w-[25%] flex flex-col justify-center  items-center bg-[#ffffff] rounded-xl"
+                      : "w-[25%] flex flex-col justify-center  items-center bg-[#ffffff] rounded-xl"
+                  }
+                >
+                  <CardHeader status={item.status} />
+
+                  <div className="pt-3">
+                    <HexShape UpPayout={item.upPayout} />
+                  </div>
+
+                  <div className=" mx-4 border-4 border-[#ed4b9e] w-[350px]  rounded-xl bg-[#ffffff]">
+                    {item.status === "Next" ? (
+                      <>
+                        <div className="flex flex-col gap-1 py-5 mx-5">
+                          <div className="flex  justify-between text-[#290f60] font-extrabold">
+                            <span>Prize Pool</span>
+                            <span>{item.pricePool}</span>
+                          </div>
+                          <div className="flex flex-col gap-2 text-white font-bold">
+                            <button className="bg-[#32d0aa] p-3 rounded-xl mx-3">
+                              Enter Up
+                            </button>
+                            <button className="bg-[#ed4b9e] p-3 rounded-xl mx-3">
+                              Enter Down
+                            </button>
+                          </div>
+                        </div>
+                      </>
+                    ) : item.status === "Later" ? (
+                      <>
+                        <div className="flex flex-col py-3  justify-center gap-2 items-center text-[#280e5f]">
+                          <div className="text-lg font-bold">Entry Starts</div>
+                          <div className="text-2xl font-extrabold">~00:38</div>
+                        </div>
+                      </>
+                    ) : (
+                      <div>
+                        <div className="py-4 mx-3 flex flex-col gap-4">
+                          <div className=" font-bold text-[#7b6faa]">
+                            LAST PRICE
+                          </div>
+                          <div className="flex justify-between">
+                            <div className="text-2xl font-bold text-[#ed4b9e]">
+                              ${item.Lastprise}
+                            </div>
+                            <div className="bg-[#ed4b9e] p-1 rounded-md text-white font-semibold flex items-center gap-2">
+                              <FaArrowDown /> $ -{item?.DownValue}
+                            </div>
+                          </div>
+
+                          <div className="text-[#3b236d]">
+                            <div className="flex justify-between font-semibold ">
+                              <div>Locked Price</div>
+                              <div>${item?.LockedPrise}</div>
+                            </div>
+                            <div className="flex justify-between font-extrabold">
+                              <div>Prize Pool</div>
+                              <div>{item?.pricePool}BNB</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div className="pb-3">
+                    {item.status === "Next" || item.status === "Later" ? (
+                      <HexDownWhite DownPayout={item.downPayout} />
+                    ) : (
+                      <HexDownShape DownPayout={item.downPayout} />
+                    )}
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* <div className="w-60 h-60  relative rounded-xl">
+        <div
+          className="absolute bottom-0 left-0 right-0 h-10 bg-gray-400 rounded-xl"
+          style={{ clipPath: "polygon(0 100%, 50% 0, 100% 100%)" }}
+        ></div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <div className=" ml-[7px] w-[228px] h-10 bg-gray-400 "></div> */}
+    </>
   );
 }
