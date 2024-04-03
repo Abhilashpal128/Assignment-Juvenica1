@@ -7,9 +7,9 @@ import {
   FaArrowDown,
 } from "react-icons/fa6";
 import { RxCountdownTimer } from "react-icons/rx";
-import coinImage from "../public/Images/coinIcon.png";
-import clockImage from "../public/Images/clock.png";
-import CardArrow from "../public/Images/cardArrow.png";
+// import coinImage from "../public/Images/coinIcon.png";
+// import clockImage from "../public/Images/clock.png";
+// import CardArrow from "../public/Images/cardArrow.png";
 import HexShape from "./layouts/HexShape";
 import HexDownShape from "./layouts/HexDownShape";
 import CardHeader from "./layouts/CardHeader";
@@ -71,7 +71,7 @@ export default function Home() {
           <div className="">
             <div className="flex w-full items-center   ">
               <Image
-                src={"/Images/coinIcon.png"}
+                src={"/coinIcon.png"}
                 alt="icon"
                  height={100}
                   width={80}
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
               <div>
                 <Image
-                  src={"/Images/cardArrow.png"}
+                  src={"/cardArrow.png"}
                   alt="cardArrow"
                   height={100}
                   width={80}
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
               <div className="absolute pl-[100px]">
                 <Image
-                  src={"/Images/clock.png"}
+                  src={"/clock.png"}
                   height={100}
                   width={100}
                   alt="clock"

@@ -1,11 +1,11 @@
 import Image from "next/image";
-import HexDown from "/Images/DownHex.png";
+// import HexDown from "/Images/DownHex.png";
 
 export default function HexDownShape({ DownPayout }) {
   return (
     <>
       <div className="relative">
-        <Image src={HexDown} height={100} width={300} alt="hexUp" />
+        <Image src={"/DownHex.png"} height={100} width={300} alt="hexUp" />
         <div className="absolute bottom-6 left-[110px] flex items-center justify-center">
           <div className="text-white text-center text-lg flex flex-col">
             <span className="text-sm font-semibold">{DownPayout} payout</span>

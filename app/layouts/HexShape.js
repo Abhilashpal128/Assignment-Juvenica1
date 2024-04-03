@@ -1,11 +1,10 @@
 import Image from "next/image";
-import HexUp from "/Images/UpHex.png";
 
 export default function HexShape({ UpPayout }) {
   return (
     <>
       <div className="relative">
-        <Image src={HexUp} height={100} width={300} alt="hexUp" />
+        <Image src={"/UpHex.png"} height={100} width={300} alt="hexUp" />
         <div className="absolute top-4 left-[100px] flex items-center justify-center">
           <div className="text-white text-center text-lg flex flex-col">
             <span className="text-2xl font-bold text-[#4cd5b3]">Up </span>
